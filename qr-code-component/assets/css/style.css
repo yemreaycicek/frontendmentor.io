@@ -1,0 +1,63 @@
+:root {
+  /* >>> || Colors || <<< */
+  --body-background: hsl(212, 45%, 89%);
+  --card-background: hsl(0, 0%, 100%);
+  --card-title: hsl(218, 44%, 22%);
+  --card-paragraph: hsl(220, 15%, 55%);
+
+  /* >>> || Typography(s) || <<< */
+  --outfit: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-background);
+  font-family: var(--outfit);
+  font-size: 15px;
+}
+
+.card {
+  width: 320px;
+  height: auto;
+  padding: 16px;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.card-content {
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+.card-content .card-title {
+  color: var(--card-title);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.card-content .card-paragraph {
+  color: var(--card-paragraph);
+  font-size: 1rem; /* optional */
+  font-weight: 400; /* optional */
+}
