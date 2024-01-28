@@ -109,6 +109,7 @@ body {
   padding: 1rem;
   border-radius: .5rem;
   color: #FFF;
+  font-family: var(--red-hat-display);
   font-size: .9rem;
   font-weight: 600;
   cursor: pointer;
