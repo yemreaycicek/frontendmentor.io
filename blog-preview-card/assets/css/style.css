@@ -1,0 +1,102 @@
+:root {
+  --body-background: hsl(47, 88%, 63%);
+  --card-background: hsl(0, 0%, 100%);
+  --card-title: hsl(0, 0%, 7%);
+  --card-paragraph: hsl(0, 0%, 50%);
+
+  --figtree: 'Figtree', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--body-background);
+  font-family: var(--figtree);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  height: auto;
+  width: 92%;
+  padding: 1.5rem;
+  background-color: var(--card-background);
+  border: 1px solid var(--card-title);
+  border-radius: 1rem;
+  box-shadow: 8px 8px 0 var(--card-title);
+  transition: all ease 300ms;
+}
+
+.card:hover {
+  box-shadow: 16px 16px 0 var(--card-title);
+}
+
+.card-image {
+  border-radius: .75rem;
+}
+
+.card-category {
+  width: max-content;
+  margin-top: 1.5rem;
+  padding: .3rem .65rem;
+  background-color: var(--body-background);
+  font-weight: 800;
+  border-radius: .25rem;
+}
+
+.card-date {
+  margin-top: 1rem;
+}
+
+.card-title {
+  width: max-content;
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  transition: all ease 500ms;
+  cursor: pointer;
+}
+
+.card-title:hover {
+  color: var(--body-background);
+}
+
+.card-title:hover ~ .card {
+  box-shadow: 8px 8px 0 var(--card-title);
+}
+
+.card-paragraph {
+  margin-top: 1rem;
+  color: var(--card-paragraph);
+  line-height: 1.5;
+}
+
+#card-creator {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: 1.25rem;
+}
+
+.user-image {
+  width: 36px;
+  height: 36px;
+}
+
+.user-name {
+  font-size: .92rem;
+  font-weight: 800;
+}
