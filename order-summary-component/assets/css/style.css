@@ -1,0 +1,163 @@
+:root {
+  /* >>> | Color(s) | <<< */
+  --body-background: hsl(225, 100%, 94%);
+  --card-background: hsl(0, 0%, 100%);
+  --card-title: hsl(223, 47%, 23%);
+  --card-paragraph: hsl(224, 23%, 55%);
+  --payment-button: hsl(245, 75%, 52%);
+
+  /* >>> | Typography(s) | <<< */
+  --red-hat-display: 'Red Hat Display', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  color: var(--card-paragraph);
+  background-color: var(--body-background);
+  background-image: url('../images/lgmTHM2Y.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  font-family: var(--red-hat-display);  
+}
+
+.card {
+  width: 450px;
+  height: auto;
+  background-color: var(--card-background);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 450px;
+  height: 220px;
+  background-image: url('../images/nMxgWZMZ.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.card-content {
+  padding: 48px 48px 12px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.75rem;
+  color: var(--card-title);
+  font-weight: 900;
+}
+
+.card-paragraph {
+  line-height: 1.5;
+  margin-top: 1rem;
+}
+
+.card-plan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem;
+  background-color: hsl(230, 75%, 98%);
+  border-radius: .5rem;
+  margin-top: 1rem;
+}
+
+.annual-plan {
+  margin-left: -88px;
+}
+
+.annual-plan p:nth-child(1) {
+  color: var(--card-title);
+  font-weight: 600;
+}
+
+.annual-plan p:nth-child(2) {
+  font-size: 14px;
+}
+
+.change-plan {
+  color: var(--payment-button);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all ease 500ms;
+}
+
+.change-plan:hover {
+  color: hsl(245, 83%, 68%);
+  text-decoration: none;
+}
+
+.card-buttons {
+  margin-top: 1.5rem;
+}
+
+.card-buttons button {
+  width: 100%;
+  display: block;
+  background-color: red;
+  padding: 1rem;
+  border-radius: .5rem;
+  color: #FFF;
+  font-size: .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.card-buttons .payment {
+  background-color: var(--payment-button);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  transition: all ease 500ms;
+}
+
+.card-buttons .payment:hover {
+  background-color: hsl(245, 83%, 68%);
+}
+
+.card-buttons .cancel {
+  color: var(--card-paragraph);
+  background-color: transparent;
+  margin-top: .25rem;
+  transition: all ease 500ms;
+}
+
+.card-buttons .cancel:hover {
+  color: var(--card-title);
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background-image: url('../images/5hyutMD4.svg');
+  }
+
+  .card {
+    width: 327px;
+  }
+
+  .card-image {
+    width: 327px;
+    height: 200px;
+  }
+
+  .card-content {
+    padding: 2rem 1.75rem .75rem;
+  }
+
+  .card-plan {
+    padding: 1rem;
+  }
+
+  .annual-plan {
+    margin-left: -1rem;
+  }
+}
