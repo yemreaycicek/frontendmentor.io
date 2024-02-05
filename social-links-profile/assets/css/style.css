@@ -1,0 +1,84 @@
+:root {
+  /* >>> | Color(s) | <<< */
+  --green: hsl(75, 94%, 57%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --off-black: hsl(0, 0%, 8%);
+
+  /* >>> | Typography(s) | <<< */
+  --inter: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background-color: var(--off-black);
+  font-family: var(--inter);
+  font-size: 14px;
+}
+
+.card {
+  width: 384px;
+  background-color: var(--dark-grey);
+  padding: 40px;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.card-owner-image {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.card-owner-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+.card-owner-country {
+  color: var(--green);
+  font-weight: 600;
+  margin: .5rem 0 1.5rem;
+}
+
+.card-owner-social-links {
+  display: grid;
+  gap: 1rem;
+  padding-top: 1.5rem;
+}
+
+.card-owner-social-links a {
+  color: var(--white);
+  background-color: var(--grey);
+  padding: 1rem 0;
+  border-radius: .5rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all ease 100ms;
+}
+
+.card-owner-social-links a:hover {
+  color: var(--dark-grey);
+  background-color: var(--green);
+}
+
+@media screen and (376px > width) {
+  .card {
+    width: 327px;
+    padding: 24px;
+  }
+}
